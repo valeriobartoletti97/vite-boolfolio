@@ -6,7 +6,10 @@
         <p class="card-text">
             <span class="badge text-bg-success">{{language}}</span>
         </p>
-        <a href="#" class="btn btn-primary">Project details</a>
+       <button class="btn btn-primary">
+        <!-- <router-link :to="{ name: 'single-project', params: { id: id }}">Project details</router-link> --> 
+        <a href="#" class="btn btn-primary">Project Details</a>
+       </button>
       </div>
     </div>
 </template>
@@ -17,7 +20,7 @@ export default {
   props: [
     "image", 
     "title",
-    "language"
+    "language",
   ]
 };
 </script>
