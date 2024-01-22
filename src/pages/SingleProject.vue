@@ -2,7 +2,9 @@
     <h1>
         Single Project
     </h1>
-    <ProjectCard :image="this.project.image" :title="this.project.name" :language="this.project.language" />
+    <div class="d-flex justify-content-center mt-5">
+        <ProjectCard :image="this.project.image" :title="this.project.name" :language="this.project.language" />
+    </div>
 </template>
 
 <script>
