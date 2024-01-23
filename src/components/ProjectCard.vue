@@ -6,22 +6,26 @@
         <p class="card-text">
             <span class="badge text-bg-success">{{language}}</span>
         </p>
-       <button class="btn btn-primary">
-        <!-- <router-link :to="{ name: 'single-project', params: { id: id }}">Project details</router-link> --> 
-        <a href="#" class="btn btn-primary">Project Details</a>
-       </button>
+       <!-- <router-link class="btn btn-primary" :to="{ name: 'single-project',params: {id: project.id}}">Project details</router-link> -->
+        <!-- <a href="#" class="btn btn-primary">Project Details</a> --> 
       </div>
     </div>
 </template>
 
 <script>
+import {store} from "../store";
 export default {
   name: "ProjectCard",
   props: [
     "image", 
     "title",
     "language",
-  ]
+  ],
+  data(){
+    return{
+      store
+    }
+  }
 };
 </script>
 
