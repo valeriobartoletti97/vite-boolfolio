@@ -2,10 +2,10 @@
     <div>
       <h1 class="mb-4">My Projects</h1>
       <div class="container">
-        <select @change="getAllProjects" name="types" v-model="selectedType">
-            <option value="">All</option>
-            <option v-for="type in types" :key="type.id" :value="type.id">{{type.name}}</option>
-        </select>
+          <select @change="getAllProjects" name="types" v-model="selectedType">
+              <option value="">All</option>
+              <option v-for="type in types" :key="type.id" :value="type.id">{{type.name}}</option>
+          </select>
         <div class="row justify-content-center gap-4">
             <ProjectCard v-for="project in projects" :key="project.id" :image="store.imgPath+project.image" :title="project.name" :language="project.language"/>
         </div>
@@ -51,11 +51,6 @@
           console.log(this.types);
         });
       },
-      filterTypes(){
-        if(this.selectedType){
-
-        }
-      }
     },
     created(){
       this.getAllProjects()

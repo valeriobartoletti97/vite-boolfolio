@@ -47,6 +47,10 @@
             name: "projects",
             label: "Projects",
           },
+          {
+            name: "contacts",
+            label: "Contacts",
+          },
         ],
       };
     },
